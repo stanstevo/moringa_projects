@@ -38,3 +38,16 @@ def list_tasks(tasks: list) -> None:
         for task_number, task in enumerate(tasks):
             status = "Completed" if task["completed"] else "Not Completed"
             print(f"{task_number}. {task['task_name']} - {status}")
+
+def remove_task(task_index: int) -> None:
+    """
+    Remove a task.
+
+    Args:
+        task_index (int): Index of the task to be removed.
+    """
+    if task_index >= 0 and task_index < len(tasks):
+        tasks.pop(task_index)
+        print("Task removed!")
+    else:
+        print("You have entered an invalid index")
