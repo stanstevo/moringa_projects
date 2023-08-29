@@ -51,3 +51,24 @@ def remove_task(task_index: int) -> None:
         print("Task removed!")
     else:
         print("You have entered an invalid index")
+
+def show_menu():
+    '''
+    Display a welcome message and a list of available actions.
+    
+    Args:
+        None
+
+    Returns:
+        None
+    
+    Raises:
+        None
+    
+    Note:
+        Use the print() function to display the message.
+    
+    '''
+    print('Welcome to the to-do list manager')
+    print('Please select an action\n "1. Add Task"\n "2. Mark Task as Completed"\n "3. List Tasks"\n "4. Remove Task"\n "5. Quit"\n')
+    
