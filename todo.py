@@ -71,4 +71,31 @@ def show_menu():
     '''
     print('Welcome to the to-do list manager')
     print('Please select an action\n "1. Add Task"\n "2. Mark Task as Completed"\n "3. List Tasks"\n "4. Remove Task"\n "5. Quit"\n')
-    
+
+def prompt():
+    while True:
+        show_menu()
+        option = int(input("Enter your option: "))
+        match option:
+            case 1: 
+                task_name = input("Enter task name: ")
+                add_tasks(task_name)            
+            case 2:
+                index = int(input("Enter task index: "))
+                mark_completed(index)
+            case 3:
+                list_tasks(tasks)
+            case 4:
+                index = int(input("Enter task index: "))
+                remove_task(index)
+            case 5:
+                print("Goodbye!")
+                break    
+            case _:
+                print("Invalid option")
+
+def main():
+    prompt()
+
+if __name__ == "__main__":
+    main()
