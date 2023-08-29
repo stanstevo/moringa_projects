@@ -24,3 +24,17 @@ def mark_completed(task_index: int) -> None:
             print("Task is marked as completed")
     else:
         print("You have entered an invalid index")
+
+def list_tasks(tasks: list) -> None:
+    """
+    List all tasks.
+
+    Args:
+        tasks (list): List of tasks.
+    """
+    if len(tasks) == 0:
+        print("No tasks to display")
+    else:
+        for task_number, task in enumerate(tasks):
+            status = "Completed" if task["completed"] else "Not Completed"
+            print(f"{task_number}. {task['task_name']} - {status}")
